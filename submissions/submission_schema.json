@@ -138,7 +138,7 @@
         ]
       }
     ],
-    "repo_url": "https://github.com/codemintous/sagar-hackthon-submition",
+    "repo_url": "https://github.com/codemintous/dashmetrics-mcp",
     "contact_info": {
       "email": "contact@codeminto.com",
       "discord": "sagarjethi"
@@ -170,7 +170,7 @@
       "requests_per_minute": 60,
       "requests_per_day": 10000
     },
-    "documentation_url": "https://github.com/codemintous/sagar-hackthon-submition/blob/main/README.md",
+    "documentation_url": "https://github.com/codemintous/dashmetrics-mcp/blob/main/README.md",
     "version": "1.0.0",
     "status": "production"
   } 
