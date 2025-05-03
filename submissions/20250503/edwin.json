@@ -1,0 +1,115 @@
+{
+    "server_id": "edwin-mcp-server",
+    "server_name": "Edwin MCP Server",
+    "provider": {
+      "name": "Edwin",
+      "github_username": "edwin-finance",
+      "website": "https://edwin.finance"
+    },
+    "endpoints": {
+      "base_url": "https://api.edwin.finance",
+      "invoke_path": "/mcp/v1/invoke",
+      "version": "0.1.0"
+    },
+    "capabilities": [
+      {
+        "name": "get_balance",
+        "description": "Get token balance for a given address",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "string",
+              "description": "Wallet address to check balance for"
+            },
+            "token": {
+              "type": "string",
+              "description": "Token symbol or address"
+            }
+          },
+          "required": ["address", "token"]
+        }
+      },
+      {
+        "name": "jupiter_swap",
+        "description": "Swap tokens using Jupiter aggregator on Solana",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "inputMint": {
+              "type": "string",
+              "description": "The input token mint address"
+            },
+            "outputMint": {
+              "type": "string",
+              "description": "The output token mint address"
+            },
+            "amount": {
+              "type": ["string", "number"],
+              "description": "The amount to swap"
+            }
+          },
+          "required": ["inputMint", "outputMint", "amount"]
+        }
+      },
+      {
+        "name": "aave_supply",
+        "description": "Supply assets to Aave protocol",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "chain": {
+              "type": "string",
+              "description": "The chain to supply assets on"
+            },
+            "asset": {
+              "type": "string",
+              "description": "The asset to supply"
+            },
+            "amount": {
+              "type": "number",
+              "description": "The amount to supply"
+            }
+          },
+          "required": ["chain", "asset", "amount"]
+        }
+      }
+    ],
+    "repo_url": "https://github.com/edwin-finance/edwin",
+    "contact_info": {
+      "email": "dev@edwin.finance",
+      "discord": "liran.eth"
+    },
+    "server_type": "crypto",
+    "fee_structure": {
+      "fee_enabled": true,
+      "fee_model": "percentage",
+      "fee_details": {
+        "percentage": 0.1
+      },
+      "fee_agreement_version": "1.0"
+    },
+    "tags": [
+      "defi",
+      "defai",
+      "finance",
+      "trading",
+      "crypto",
+      "investing",
+      "yield"
+    ],
+    "supported_blockchains": [
+      "ethereum",
+      "solana",
+      "polygon",
+      "arbitrum",
+      "optimism",
+      "other"
+    ],
+    "api_rate_limits": {
+      "requests_per_day": 1000
+    },
+    "documentation_url": "https://docs.edwin.finance/guides/quickstart-guide-using-the-mcp-server",
+    "version": "0.1.0",
+    "status": "development"
+  } 
